@@ -2,9 +2,9 @@ import Map from '../components/Map';
 
 export default function HomePage() {
   return (
-    <>
-      <h2>Home</h2>
+    <div>
+      <h1>Welcome to the Travel 🐞 Project</h1>
       <Map />
-    </>
+    </div>
   );
 }

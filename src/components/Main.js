@@ -1,7 +1,7 @@
 import { Switch, Route } from 'react-router-dom';
 import HomePage from '../screens/HomePage';
 import TravelLog from './TravelLog';
-import BucketList from './BucketList';
+import BucketList from './CountryWishList';
 
 export default function Main() {
   return (
