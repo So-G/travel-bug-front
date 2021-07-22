@@ -5,17 +5,17 @@ export default function NavBar() {
     <nav className="navBar">
       <ul className="navList">
         <li>
-          <NavLink exact to="/home">
+          <NavLink className="navItem" exact to="/home">
             Home
           </NavLink>
         </li>
         <li>
-          <NavLink exact to="/travellog">
+          <NavLink className="navItem" exact to="/travellog">
             Travel Log
           </NavLink>
         </li>
         <li>
-          <NavLink exact to="/bucketlist">
+          <NavLink className="navItem" exact to="/bucketlist">
             Bucket List{' '}
           </NavLink>
         </li>
