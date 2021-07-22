@@ -2,6 +2,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 
 html,
+#root,
+main,
 body {
   margin: 0;
 }
@@ -19,27 +21,19 @@ body {
 }
 
 #root {
-  height: 100%;
   display: grid;
   grid-template-rows: auto 1fr auto;
 }
 
 body {
   font-family: var(--header-footer-font);
-  display: flex;
-  flex-direction: column;
   background-color: #d4f4dd;
   text-align: center;
-}
-
-main {
-  padding-left: 20px;
-  padding-right: 20px;
-  margin: auto;
+  align-items: center;
 }
 
 header {
-  color: var(--header-footer-font-color);
+  padding: 1rem;
 }
 
 footer {
@@ -58,14 +52,14 @@ footer {
   ================*/
 
 .navBar {
-  height: 10vh;
-  background-color: var(--header-bg-color);
   color: var(--header-footer-font-color);
   font-size: larger;
-  align-items: center;
 }
 
 .navList {
+  margin: 0;
+  background-color: var(--header-bg-color);
+  padding: 2rem;
   color: white;
   list-style: none;
   display: flex;
@@ -73,7 +67,6 @@ footer {
 }
 
 a {
-  text-align: center;
   font-family: var(--header-footer-font);
   color: var(--header-footer-font-color);
   display: inline-block;
@@ -85,22 +78,11 @@ a {
 a:hover {
   color: #d62246;
 }
-/* ================
-  Cards styling
-  ================*/
 
-.country-card {
+.leaflet-container {
   margin: auto;
-  padding-top: 20px;
-  border-color: #d62246;
-  border-style: ridge;
-  border-radius: 10%;
 }
 
-/* ================
-  Cards styling
-  ================*/
-.leaflet-control-attribution .leaflet-control {
-  font-family: var(--main-font);
+.leaflet-control-attribution a {
   font-size: 10px;
 }
