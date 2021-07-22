@@ -1,10 +1,10 @@
-import DestinationDetails from '../components/TravelLog';
+import VisitedCountriesList from '../components/VisitedCountriesList';
 
-export default function VisitedCountries() {
+export default function TravelLog() {
   return (
     <>
       <h4>Travel Log</h4>
-      <DestinationDetails />
+      <VisitedCountriesList />
     </>
   );
 }

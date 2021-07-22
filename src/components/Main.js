@@ -1,6 +1,6 @@
 import { Switch, Route } from 'react-router-dom';
 import HomePage from '../screens/HomePage';
-import TravelLog from './TravelLog';
+import VisitedCountriesList from './VisitedCountriesList';
 import BucketList from './CountryWishList';
 
 export default function Main() {
@@ -9,7 +9,7 @@ export default function Main() {
       <Switch>
         <Route exact path="/" component={HomePage} />
         <Route exact path="/home" component={HomePage} />
-        <Route exact path="/travellog" component={TravelLog} />
+        <Route exact path="/travellog" component={VisitedCountriesList} />
         <Route exact path="/bucketlist" component={BucketList} />
       </Switch>
     </main>

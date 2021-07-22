@@ -16,7 +16,7 @@ body {
   --footer-bg-color: #160f29;
   --header-footer-font-color: cornsilk;
   --main-font: 'Montserrat', cursive;
-  --text-content: 'Comfortaa', cursive;
+  --header-footer-font: 'Comfortaa', cursive;
 }
 
 #root {
@@ -26,6 +26,7 @@ body {
 }
 
 body {
+  font-family: var(--header-footer-font);
   display: flex;
   flex-direction: column;
   background-color: #d4f4dd;
@@ -33,7 +34,6 @@ body {
 }
 
 main {
-  flex-grow: 1;
   padding-left: 20px;
   padding-right: 20px;
   margin: auto;
@@ -62,9 +62,46 @@ footer {
   text-align: left;
   background-color: var(--footer-bg-color);
   color: var(--header-footer-font-color);
-  font-family: var(--text-content);
+  font-family: var(--header-footer-font);
   padding: 1rem;
   position: fixed;
   bottom: 0;
   width: 100%;
+}
+
+/* ================
+  NavLinks styling
+  ================*/
+
+a {
+  text-align: center;
+  font-family: var(--header-footer-font);
+  color: var(--header-footer-font-color);
+  display: inline-block;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  font-size: 20px;
+}
+
+a:hover {
+  color: #d62246;
+}
+/* ================
+  Cards styling
+  ================*/
+
+.country-card {
+  margin: auto;
+  padding-top: 20px;
+  border-color: #d62246;
+  border-style: ridge;
+  border-radius: 10%;
+}
+
+/* ================
+  Cards styling
+  ================*/
+.leaflet-control-attribution .leaflet-control {
+  font-family: var(--main-font);
+  font-size: 10px;
 }
