@@ -8,6 +8,12 @@ body {
   margin: 0;
 }
 
+#root {
+  height: 100vh;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+
 /* ================
   Global variables
   ================*/
@@ -20,16 +26,9 @@ body {
   --header-footer-font: 'Comfortaa', cursive;
 }
 
-#root {
-  display: grid;
-  grid-template-rows: auto 1fr auto;
-}
-
 body {
   font-family: var(--header-footer-font);
   background-color: #d4f4dd;
-  text-align: center;
-  align-items: center;
 }
 
 header {
@@ -42,9 +41,6 @@ footer {
   color: var(--header-footer-font-color);
   font-family: var(--header-footer-font);
   padding: 1rem;
-  position: fixed;
-  bottom: 0;
-  width: 100%;
 }
 
 /* ================
@@ -79,10 +75,106 @@ a:hover {
   color: #d62246;
 }
 
+h2 {
+  color: var(--header-bg-color);
+  margin-top: 3rem;
+}
+
+/* ================
+  Home
+  ================*/
+.passport {
+  height: 100px;
+}
+
+/* ================
+  Map Component
+  ================*/
+
 .leaflet-container {
   margin: auto;
 }
 
 .leaflet-control-attribution a {
   font-size: 10px;
+}
+
+/* ================
+  Form
+  ================*/
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: baseline;
+  width: 30em;
+  margin: 2em auto;
+  padding: 0 4em;
+  border-radius: 0.5em;
+}
+
+.form > *:last-child {
+  margin-bottom: 1rem;
+}
+
+.form > *:first-child {
+  margin-top: 1rem;
+}
+
+.form > * {
+  margin-top: 1.5rem;
+}
+
+input[type='text'],
+input[type='password'] {
+  display: block;
+  width: 100%;
+  background: #fff;
+  border: 0px;
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: 2px solid rgba(255, 255, 255, 0);
+  transition: all 0.3s ease;
+  border-radius: 0.5rem;
+}
+
+input[type='text']:focus,
+input[type='password']:focus {
+  border: 2px solid var(--header-bg-color);
+}
+
+input[type='submit'] {
+  display: block;
+  background: var(--header-bg-color);
+  width: 100%;
+  padding: 1em;
+  cursor: pointer;
+  color: #fff;
+  border: 0;
+  border-radius: 0.5rem;
+  transition: all 0.3s ease;
+  font-size: 16px;
+}
+
+input[type='submit']:hover {
+  background: var(--accent-color);
+}
+
+/* ================
+  Cards
+  ================*/
+
+.countrypic {
+  border-radius: 20px;
+  width: 300px;
+}
+
+.cardcontainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 20px;
+  align-items: stretch;
+  grid-gap: 1rem;
+  border-style: double;
+  border-color: #d62246;
 }

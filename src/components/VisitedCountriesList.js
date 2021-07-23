@@ -1,41 +1,53 @@
 import Lyon from '../assets/LYON.jpg';
 import Shanghai from '../assets/SHANGHAI.JPG';
+import Kyoto from '../assets/KYOTO.jpg';
+import Uruguay from '../assets/URUGUAY.jpg';
 
 const countries = [
   {
-    id: 1,
-    name: 'Canada',
-    image: 'random image',
-    year: 2003,
-    description: 'Canada ',
-  },
-  {
-    id: 2,
     name: 'Lyon',
-    image: { Lyon },
+    image: Lyon,
     year: 1988,
     description: 'Home ❤️',
   },
   {
-    id: 3,
     name: 'Shanghai',
-    image: { Shanghai },
+    image: Shanghai,
     year: 2017,
-    description: 'Shanghai ',
+    description: 'Shanghai',
+  },
+  {
+    name: 'Kyoto',
+    image: Kyoto,
+    year: 2019,
+    description: 'Japan',
+  },
+
+  {
+    name: 'Uruguay',
+    image: Uruguay,
+    year: 2020,
+    description: 'Uruguay',
   },
 ];
 
 function VisitedCountriesList() {
   return (
-    <div className="country-card">
-      {countries.map((destination) => (
-        <>
-          <h1>{destination.name}</h1>
-          <img src={destination.image} alt={destination.name} />
-          <p> Visited in : {destination.year} </p>
-          <p> Description : {destination.description}</p>
-        </>
-      ))}
+    <div className="cardcontainer">
+      <div className="country-card">
+        {countries.map((destination) => (
+          <>
+            <h1>{destination.name}</h1>
+            <img
+              className="countrypic"
+              src={destination.image}
+              alt={destination.name}
+            />
+            <p> Visited in : {destination.year} </p>
+            <p> Description : {destination.description}</p>
+          </>
+        ))}
+      </div>
     </div>
   );
 }

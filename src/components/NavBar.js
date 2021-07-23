@@ -19,6 +19,11 @@ export default function NavBar() {
             Bucket List{' '}
           </NavLink>
         </li>
+        <li>
+          <NavLink className="navItem" exact to="/login">
+            Log In
+          </NavLink>
+        </li>
       </ul>
     </nav>
   );
