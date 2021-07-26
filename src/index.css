@@ -99,6 +99,10 @@ h2 {
   font-size: 10px;
 }
 
+.leaflet-div-icon {
+  background: #00000000;
+  border: none;
+}
 /* ================
   Cards
   ================*/

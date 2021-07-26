@@ -1,5 +1,5 @@
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
-// import { selectIcon } from './mapMarkers';
+import selectIcon from './mapMarkers';
 
 export default function Map({
   pins = [
@@ -33,6 +33,13 @@ export default function Map({
       lng: -56.164532,
       visited: 'ok',
     },
+    {
+      name: 'Costa Rica',
+      description: '🦜',
+      lat: 9.934739,
+      lng: -84.087502,
+      visited: null,
+    },
   ],
 }) {
   return (
@@ -49,8 +56,8 @@ export default function Map({
         url="https://stamen-tiles-{s}.a.ssl.fastly.net/watercolor/{z}/{x}/{y}.{ext}"
         ext="jpg"
       />
-      {pins.map(({ name, description, lat, lng }) => (
-        <Marker key={name} position={[lat, lng]}>
+      {pins.map(({ name, description, visited, lat, lng }) => (
+        <Marker key={name} icon={selectIcon(visited)} position={[lat, lng]}>
           <Popup>
             {name}, {description}
           </Popup>
