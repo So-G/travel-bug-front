@@ -14,6 +14,9 @@ body {
   grid-template-rows: auto 1fr auto;
 }
 
+main {
+  margin: auto;
+}
 /* ================
   Global variables
   ================*/
@@ -43,6 +46,9 @@ footer {
   padding: 1rem;
 }
 
+h1 {
+  text-align: center;
+}
 /* ================
   NavBar styling
   ================*/
@@ -77,14 +83,8 @@ a:hover {
 
 h2 {
   color: var(--header-bg-color);
+  font-size: large;
   margin-top: 3rem;
-}
-
-/* ================
-  Home
-  ================*/
-.passport {
-  height: 100px;
 }
 
 /* ================
@@ -100,67 +100,6 @@ h2 {
 }
 
 /* ================
-  Form
-  ================*/
-.form {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: baseline;
-  width: 30em;
-  margin: 2em auto;
-  padding: 0 4em;
-  border-radius: 0.5em;
-}
-
-.form > *:last-child {
-  margin-bottom: 1rem;
-}
-
-.form > *:first-child {
-  margin-top: 1rem;
-}
-
-.form > * {
-  margin-top: 1.5rem;
-}
-
-input[type='text'],
-input[type='password'] {
-  display: block;
-  width: 100%;
-  background: #fff;
-  border: 0px;
-  padding: 0.5rem;
-  font-size: 1rem;
-  border: 2px solid rgba(255, 255, 255, 0);
-  transition: all 0.3s ease;
-  border-radius: 0.5rem;
-}
-
-input[type='text']:focus,
-input[type='password']:focus {
-  border: 2px solid var(--header-bg-color);
-}
-
-input[type='submit'] {
-  display: block;
-  background: var(--header-bg-color);
-  width: 100%;
-  padding: 1em;
-  cursor: pointer;
-  color: #fff;
-  border: 0;
-  border-radius: 0.5rem;
-  transition: all 0.3s ease;
-  font-size: 16px;
-}
-
-input[type='submit']:hover {
-  background: var(--accent-color);
-}
-
-/* ================
   Cards
   ================*/
 
@@ -169,12 +108,14 @@ input[type='submit']:hover {
   width: 300px;
 }
 
-.cardcontainer {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 20px;
-  align-items: stretch;
-  grid-gap: 1rem;
-  border-style: double;
-  border-color: #d62246;
+.cards {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.card {
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }

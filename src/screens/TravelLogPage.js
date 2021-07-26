@@ -3,7 +3,7 @@ import VisitedCountriesList from '../components/VisitedCountriesList';
 export default function TravelLog() {
   return (
     <>
-      <h2>Travel Log</h2>
+      <h1>Travel Log</h1>
       <VisitedCountriesList />
     </>
   );

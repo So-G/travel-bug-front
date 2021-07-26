@@ -9,12 +9,20 @@ const countries = [
     image: Lyon,
     year: 1988,
     description: 'Home ❤️',
+    coordinates: {
+      lat: 4.85,
+      lng: 45.75,
+    },
   },
   {
     name: 'Shanghai',
     image: Shanghai,
     year: 2017,
     description: 'Shanghai',
+    coordinates: {
+      lat: 31.224361,
+      lng: 121.46917,
+    },
   },
   {
     name: 'Kyoto',
@@ -31,13 +39,15 @@ const countries = [
   },
 ];
 
+// faire le map et API here
+
 function VisitedCountriesList() {
   return (
-    <div className="cardcontainer">
-      <div className="country-card">
+    <div className="cards">
+      <div className="card">
         {countries.map((destination) => (
           <>
-            <h1>{destination.name}</h1>
+            <h3>{destination.name}</h3>
             <img
               className="countrypic"
               src={destination.image}
