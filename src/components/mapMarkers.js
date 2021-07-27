@@ -19,7 +19,7 @@ const selectIconType = (visited) => {
 
 export default function selectIcon(visited) {
   const iconHeight = 30;
-  const iconWidth = 20;
+  const iconWidth = 18;
 
   return new L.Icon({
     iconUrl: selectIconType(visited),
