@@ -47,14 +47,20 @@ function VisitedCountriesList() {
       <div className="card">
         {countries.map((destination) => (
           <>
-            <h3>{destination.name}</h3>
-            <img
-              className="countrypic"
-              src={destination.image}
-              alt={destination.name}
-            />
-            <p> Visited in : {destination.year} </p>
-            <p> Description : {destination.description}</p>
+            <div className="card_image-container">
+              <img
+                className="countrypic"
+                src={destination.image}
+                alt={destination.name}
+              />
+            </div>
+            <div className="card_content">
+              <div className="card_title">{destination.name}</div>
+              <div className="card_info">
+                <p className="card_year"> {destination.year} </p>
+                <p> Description : {destination.description}</p>
+              </div>
+            </div>
           </>
         ))}
       </div>

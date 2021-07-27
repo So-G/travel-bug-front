@@ -14,9 +14,6 @@ body {
   grid-template-rows: auto 1fr auto;
 }
 
-main {
-  margin: auto;
-}
 /* ================
   Global variables
   ================*/
@@ -107,18 +104,77 @@ h2 {
   Cards
   ================*/
 
-.countrypic {
-  border-radius: 20px;
-  width: 300px;
+main {
+  border-width: 10px;
+  border-style: solid;
+  border-color: hotpink;
+  display: grid;
+  grid-template-columns: 1fr repeat(12, minmax(auto, 60px)) 1fr;
+  grid-gap: 40px;
+  padding: 60px 0;
 }
 
 .cards {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  box-sizing: border-box;
+  grid-column: 2 / span 12;
+  border: purple;
+  border-style: double;
+  display: grid;
+  grid-template-columns: repeat(12, minmax(auto, 60px));
+  grid-gap: 40px;
 }
 
 .card {
+  grid-column-end: span 4;
+  display: flex;
+  flex-direction: column;
+  background-color: #727475;
+  transition: all 0.4s ease 0s;
+}
+
+.card:hover {
+  transform: translateY(-7px);
+}
+
+.card_image-container {
+  border-style: dashed;
+  border-color: yellow;
+  width: 100%;
+  padding-top: 56.25%;
+  overflow: hidden;
+  position: relative;
+}
+
+.card_image-container img {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.card_content {
+  border-style: dotted;
+  border-color: orange;
+  padding: 20px;
+}
+
+.card_title {
+  margin-bottom: 20px;
+}
+
+.card_info {
+  display: flex;
+  align-self: end;
+  align-items: center;
+}
+
+.card_year {
+  border-style: double;
+  border-color: lightskyblue;
+  margin-left: auto;
+  padding: 5px 20px;
+  background-color: rgb(32, 29, 36);
+  cursor: pointer;
+  border-radius: 20px;
 }
