@@ -26,6 +26,10 @@ body {
   --header-footer-font: 'Comfortaa', cursive;
 }
 
+main {
+  margin: 0;
+  padding: 1em;
+}
 body {
   font-family: var(--header-footer-font);
   background-color: #d4f4dd;
@@ -88,9 +92,8 @@ h2 {
 /* ================
 Map Component
 ================*/
-
-.leaflet-container {
-  margin: auto;
+.map {
+  margin-left: 100px;
 }
 
 .leaflet-control-attribution a {
@@ -105,11 +108,11 @@ Map Component
 Cards
 ================*/
 
-main {
+#grid {
+  margin: auto;
   display: grid;
   grid-template-columns: 1fr repeat(12, minmax(auto, 60px)) 1fr;
   grid-gap: 40px;
-  padding: 60px 0;
 }
 
 .cards {
@@ -199,4 +202,17 @@ main {
   .card {
     grid-column-end: span 6;
   }
+}
+
+.form {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-form {
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
 }
