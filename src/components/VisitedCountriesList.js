@@ -43,28 +43,26 @@ const countries = [
 
 function VisitedCountriesList() {
   return (
-    <div className="cards">
-      <div className="card">
-        {countries.map((destination) => (
-          <>
-            <div className="card_image-container">
-              <img
-                className="countrypic"
-                src={destination.image}
-                alt={destination.name}
-              />
+    <section className="cards">
+      {countries.map((destination) => (
+        <div className="card">
+          <div className="card_image-container">
+            <img
+              className="countrypic"
+              src={destination.image}
+              alt={destination.name}
+            />
+          </div>
+          <div className="card_content">
+            <div className="card_title">{destination.name}</div>
+            <div className="card_info">
+              <p className="card_year"> {destination.year} </p>
+              <p> Description : {destination.description}</p>
             </div>
-            <div className="card_content">
-              <div className="card_title">{destination.name}</div>
-              <div className="card_info">
-                <p className="card_year"> {destination.year} </p>
-                <p> Description : {destination.description}</p>
-              </div>
-            </div>
-          </>
-        ))}
-      </div>
-    </div>
+          </div>
+        </div>
+      ))}
+    </section>
   );
 }
 

@@ -46,9 +46,10 @@ footer {
 h1 {
   text-align: center;
 }
+
 /* ================
-  NavBar styling
-  ================*/
+NavBar styling
+================*/
 
 .navBar {
   color: var(--header-footer-font-color);
@@ -85,8 +86,8 @@ h2 {
 }
 
 /* ================
-  Map Component
-  ================*/
+Map Component
+================*/
 
 .leaflet-container {
   margin: auto;
@@ -101,13 +102,10 @@ h2 {
   border: none;
 }
 /* ================
-  Cards
-  ================*/
+Cards
+================*/
 
 main {
-  border-width: 10px;
-  border-style: solid;
-  border-color: hotpink;
   display: grid;
   grid-template-columns: 1fr repeat(12, minmax(auto, 60px)) 1fr;
   grid-gap: 40px;
@@ -117,8 +115,6 @@ main {
 .cards {
   box-sizing: border-box;
   grid-column: 2 / span 12;
-  border: purple;
-  border-style: double;
   display: grid;
   grid-template-columns: repeat(12, minmax(auto, 60px));
   grid-gap: 40px;
@@ -128,7 +124,7 @@ main {
   grid-column-end: span 4;
   display: flex;
   flex-direction: column;
-  background-color: #727475;
+  /* background-color: #727475; */
   transition: all 0.4s ease 0s;
 }
 
@@ -137,8 +133,6 @@ main {
 }
 
 .card_image-container {
-  border-style: dashed;
-  border-color: yellow;
   width: 100%;
   padding-top: 56.25%;
   overflow: hidden;
@@ -154,8 +148,6 @@ main {
 }
 
 .card_content {
-  border-style: dotted;
-  border-color: orange;
   padding: 20px;
 }
 
@@ -170,11 +162,41 @@ main {
 }
 
 .card_year {
-  border-style: double;
-  border-color: lightskyblue;
   margin-left: auto;
   padding: 5px 20px;
-  background-color: rgb(32, 29, 36);
   cursor: pointer;
   border-radius: 20px;
+}
+
+/* ================
+  Media Queries
+  ================*/
+@media only screen and (max-width: 1000px) {
+  .card {
+    grid-column-end: span 6;
+  }
+}
+@media only screen and (max-width: 700px) {
+  main {
+    grid-gap: 20px;
+  }
+  .card {
+    grid-column-end: span 12;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  main {
+    grid-template-columns: 10px repeat(6, 1fr) 10px;
+    grid-gap: 10px;
+  }
+
+  .cards {
+    grid-column: 2 / span 6;
+    grid-template-columns: repeat(6, 1fr);
+    grid-gap: 20px;
+  }
+  .card {
+    grid-column-end: span 6;
+  }
 }
