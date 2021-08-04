@@ -93,13 +93,19 @@ h2 {
 Map Component
 ================*/
 .map {
-  margin-left: 100px;
+  margin: auto;
+  width: 50%;
+}
+
+.leaflet-container {
+  margin-top: 1em;
+  border-radius: 30px;
+  margin: 0;
 }
 
 .leaflet-control-attribution a {
   font-size: 10px;
 }
-
 .leaflet-div-icon {
   background: #00000000;
   border: none;
@@ -108,7 +114,7 @@ Map Component
 Cards
 ================*/
 
-#grid {
+.grid {
   margin: auto;
   display: grid;
   grid-template-columns: 1fr repeat(12, minmax(auto, 60px)) 1fr;
@@ -136,6 +142,7 @@ Cards
 }
 
 .card_image-container {
+  border-radius: 20px;
   width: 100%;
   padding-top: 56.25%;
   overflow: hidden;

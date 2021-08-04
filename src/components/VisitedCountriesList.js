@@ -43,8 +43,8 @@ const countries = [
 
 function VisitedCountriesList() {
   return (
-    <id className="grid">
-      <section className="cards">
+    <div className="grid">
+      <div className="cards">
         {countries.map((destination) => (
           <div className="card">
             <div className="card_image-container">
@@ -64,8 +64,8 @@ function VisitedCountriesList() {
             </div>
           </div>
         ))}
-      </section>
-    </id>
+      </div>
+    </div>
   );
 }
 

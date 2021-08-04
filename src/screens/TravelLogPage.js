@@ -1,4 +1,3 @@
-/* eslint-disable jsx-a11y/control-has-associated-label */
 import VisitedCountriesList from '../components/VisitedCountriesList';
 
 export default function TravelLog() {
