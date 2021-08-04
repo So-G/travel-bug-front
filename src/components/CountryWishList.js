@@ -1,6 +1,7 @@
 /* eslint-disable no-unused-vars */
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import Passport from '../assets/Passport.png';
 
 export default function WishList() {
   const [wishList, setWishList] = useState([]);
@@ -23,15 +24,21 @@ export default function WishList() {
               />
             </div>
             <div className="card_content">
-              <div className="card_title">
-                {destination.name} - {destination.year}
-              </div>
+              <div className="card_title">{destination.name}</div>
               <div className="card_info">
                 <p> Description : {destination.description}</p>
               </div>
             </div>
           </div>
         ))}
+        <div className="card">
+          <div className="add_card_content">
+            <div className="add_card_info">
+              Add a new destination to your bucket list{' '}
+              <img className="passport" src={Passport} alt="button" />
+            </div>
+          </div>
+        </div>
       </section>
     </div>
   );

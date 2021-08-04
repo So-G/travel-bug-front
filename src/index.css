@@ -133,7 +133,6 @@ Cards
   grid-column-end: span 4;
   display: flex;
   flex-direction: column;
-  /* background-color: #727475; */
   transition: all 0.4s ease 0s;
 }
 
@@ -161,6 +160,15 @@ Cards
   padding: 20px;
 }
 
+.add_card_content {
+  height: 250px;
+  padding: 20px;
+  border-style: solid;
+  border-color: lightgrey;
+  box-shadow: lightslategray;
+  border-radius: 20px;
+}
+
 .card_title {
   margin-bottom: 20px;
 }
@@ -178,6 +186,15 @@ Cards
   border-radius: 20px;
 }
 
+.passport {
+  padding-top: 1em;
+  height: 200px;
+}
+.add_card_info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 /* ================
   Media Queries
   ================*/
