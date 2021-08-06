@@ -161,8 +161,9 @@ Cards
 }
 
 .add_card_content {
-  height: 250px;
-  padding: 20px;
+  border-radius: 20px;
+  height: 202px;
+  padding-top: 56.25%;
   border-style: solid;
   border-color: lightgrey;
   box-shadow: lightslategray;
@@ -188,7 +189,7 @@ Cards
 
 .passport {
   padding-top: 1em;
-  height: 200px;
+  height: 100px;
 }
 .add_card_info {
   display: flex;
@@ -239,4 +240,13 @@ Cards
   display: flex;
   flex-direction: column;
   margin: 0;
+}
+
+.add_card_content {
+  height: 250px;
+  padding: 20px;
+  border-style: solid;
+  border-color: lightgrey;
+  box-shadow: lightslategray;
+  border-radius: 20px;
 }
