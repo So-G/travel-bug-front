@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { NavLink } from 'react-router-dom';
 import axios from 'axios';
 import Passport from '../assets/Passport.png';
 
@@ -34,7 +35,9 @@ export default function WishList() {
           <div className="add_card_content">
             <div className="add_card_info">
               Click on passport to add a new destination to your bucket list{' '}
-              <img className="passport" src={Passport} alt="button" />
+              <NavLink to="/addnewcountry">
+                <img className="passport" src={Passport} alt="button" />
+              </NavLink>
             </div>
           </div>
         </div>
