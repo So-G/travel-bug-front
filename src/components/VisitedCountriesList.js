@@ -1,56 +1,59 @@
-import Lyon from '../assets/LYON.jpg';
-import Shanghai from '../assets/SHANGHAI.JPG';
-import Kyoto from '../assets/KYOTO.jpg';
-import Uruguay from '../assets/URUGUAY.jpg';
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
 
-const countries = [
-  {
-    name: 'Lyon',
-    image: Lyon,
-    year: 1988,
-    description: 'Home ❤️',
-    coordinates: {
-      lat: 4.85,
-      lng: 45.75,
-    },
-  },
-  {
-    name: 'Shanghai',
-    image: Shanghai,
-    year: 2017,
-    description: 'Shanghai',
-    coordinates: {
-      lat: 31.224361,
-      lng: 121.46917,
-    },
-  },
-  {
-    name: 'Kyoto',
-    image: Kyoto,
-    year: 2019,
-    description: 'Japan',
-  },
+export default function VisitedCountriesList() {
+  const [visitedCountriesList, setVisitedCountriesList] = useState([]);
+  useEffect(() => {
+    axios.get('http://localhost:5000/visitedlocations').then((response) => {
+      setVisitedCountriesList(response.data);
+    });
+  }, []);
 
-  {
-    name: 'Uruguay',
-    image: Uruguay,
-    year: 2020,
-    description: 'Uruguay',
-  },
-];
+  // const countries = [
+  //   {
+  //     name: 'Lyon',
+  //     image: Lyon,
+  //     year: 1988,
+  //     description: 'Home ❤️',
+  //     coordinates: {
+  //       lat: 4.85,
+  //       lng: 45.75,
+  //     },
+  //   },
+  //   {
+  //     name: 'Shanghai',
+  //     image: Shanghai,
+  //     year: 2017,
+  //     description: 'Shanghai',
+  //     coordinates: {
+  //       lat: 31.224361,
+  //       lng: 121.46917,
+  //     },
+  //   },
+  //   {
+  //     name: 'Kyoto',
+  //     image: Kyoto,
+  //     year: 2019,
+  //     description: 'Japan',
+  //   },
 
-// faire le map et API here
+  //   {
+  //     name: 'Uruguay',
+  //     image: Uruguay,
+  //     year: 2020,
+  //     description: 'Uruguay',
+  //   },
+  // ];
 
-function VisitedCountriesList() {
   return (
     <div className="grid">
       <div className="cards">
-        {countries.map((destination) => (
+        {visitedCountriesList.map((destination) => (
           <div className="card">
             <div className="card_image-container">
               <img
                 className="countrypic"
-                src={destination.image}
+                src={destination.background_image}
                 alt={destination.name}
               />
             </div>
@@ -68,5 +71,3 @@ function VisitedCountriesList() {
     </div>
   );
 }
-
-export default VisitedCountriesList;
