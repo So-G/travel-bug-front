@@ -171,6 +171,9 @@ Cards
 }
 
 .card_title {
+  text-align: center;
+  cursor: pointer;
+  color: var(--header-bg-color);
   margin-bottom: 20px;
 }
 
@@ -181,9 +184,7 @@ Cards
 }
 
 .card_year {
-  margin-left: auto;
   padding: 5px 20px;
-  cursor: pointer;
   border-radius: 20px;
 }
 

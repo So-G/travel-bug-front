@@ -1,20 +1,23 @@
+/* eslint-disable no-unused-vars */
 import React, { useState, useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
-import axios from 'axios';
+import { bucket } from '../data/bucketList';
+
+// import axios from 'axios';
 import Passport from '../assets/Passport.png';
 
 export default function WishList() {
-  const [wishList, setWishList] = useState([]);
-  useEffect(() => {
-    axios.get('http://localhost:5000/bucketlist').then((response) => {
-      setWishList(response.data);
-    });
-  }, []);
+  // const [wishList, setWishList] = useState([]);
+  // useEffect(() => {
+  //   axios.get('http://localhost:5000/bucketlist').then((response) => {
+  //     setWishList(response.data);
+  //   });
+  // }, []);
 
   return (
     <div className="grid">
       <section className="cards">
-        {wishList.map((destination) => (
+        {bucket.map((destination) => (
           <div className="card">
             <div className="card_image-container">
               <img
